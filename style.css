@@ -1,0 +1,386 @@
+
+:root {
+    --navy: #071525;
+    --navy-light: #10253d;
+    --gold: #c8a45d;
+    --gold-light: #e5c987;
+    --white: #f7f5ef;
+    --muted: #a9b2be;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+.header {
+    background: #06111f;
+    border-bottom: 1px solid rgba(200,164,93,.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.brand small {
+    color: white;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.brand-icon {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    border: 1px solid var(--gold);
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #d8dce2;
+    font-size: 13px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 8px 12px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+    linear-gradient(90deg, #071525 5%, rgba(7,21,37,.91) 55%, rgba(7,21,37,.68)),
+    url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1800") center/cover;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 100px 0;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.gold-line {
+    width: 65px;
+    height: 2px;
+    background: var(--gold);
+    margin: 23px 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 85px);
+    line-height: 1.05;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: var(--gold-light);
+}
+
+.hero-subtitle {
+    color: white;
+    font-size: 19px;
+    letter-spacing: 2px;
+}
+
+.location {
+    color: var(--muted);
+    margin: 15px 0 35px;
+    font-size: 14px;
+}
+
+.outline-button {
+    display: inline-block;
+    padding: 15px 28px;
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+.outline-button:hover {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.hero-symbol {
+    position: absolute;
+    right: 10%;
+    top: 15%;
+    font-family: Georgia, serif;
+    font-size: 300px;
+    color: rgba(200,164,93,.09);
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section h2 {
+    font-size: 48px;
+    margin-top: 12px;
+    color: var(--white);
+}
+
+.profile {
+    background: #0b1d30;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    border: 1px solid rgba(200,164,93,.35);
+    background: #0e2238;
+    margin-top: 45px;
+}
+
+.profile-mark {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    border: 1px solid var(--gold);
+    display: grid;
+    place-items: center;
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 55px;
+}
+
+.profile-card h3 {
+    font-size: 30px;
+    color: var(--gold-light);
+}
+
+.profile-card p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 45px;
+}
+
+.detail {
+    background: var(--navy-light);
+    padding: 30px;
+    border: 1px solid rgba(200,164,93,.2);
+    min-height: 170px;
+}
+
+.detail span {
+    color: var(--gold);
+    font-size: 12px;
+}
+
+.detail h3 {
+    font-size: 24px;
+    margin: 16px 0 10px;
+}
+
+.detail p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.contact {
+    background: #0b1d30;
+}
+
+.contact-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 40px;
+    border: 1px solid rgba(200,164,93,.3);
+    margin-top: 40px;
+}
+
+.contact-card h3 {
+    font-size: 24px;
+    color: var(--gold-light);
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+footer {
+    text-align: center;
+    background: #050e19;
+    padding: 55px 0 25px;
+}
+
+.footer-mark {
+    font-size: 48px;
+    color: var(--gold);
+}
+
+footer h3 {
+    color: var(--gold-light);
+    font-size: 28px;
+    margin: 10px;
+}
+
+footer p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.footer-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(200,164,93,.2);
+    margin: 30px 0 20px;
+}
+
+.copyright {
+    font-size: 11px;
+}
+
+@media(max-width: 768px) {
+    .nav {
+        min-height: 72px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: #06111f;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero-symbol {
+        font-size: 180px;
+        right: 0;
+        top: 45%;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .section h2 {
+        font-size: 38px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        padding: 25px;
+        gap: 18px;
+    }
+
+    .profile-card h3 {
+        font-size: 24px;
+    }
+
+    .profile-mark {
+        width: 65px;
+        height: 65px;
+        font-size: 40px;
+    }
+
+    .contact-card {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+}
